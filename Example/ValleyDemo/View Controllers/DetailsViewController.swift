@@ -35,6 +35,7 @@ class DetailsViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        automaticallyAdjustsScrollViewInsets = false
         collectionView.register(DetailPageViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     

@@ -58,6 +58,8 @@ class PinterestLayout: UICollectionViewLayout {
     }
     
     override var collectionViewContentSize: CGSize {
+        cache.removeAll()
+        prepare()
         return CGSize(width: contentWidth, height: contentHeight)
     }
     
