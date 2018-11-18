@@ -15,4 +15,5 @@ Pod::Spec.new do |s|
   s.source                = { :git => "https://github.com/mjhassan/Valley.git", :tag => "#{s.version}" }
   s.source_files          = "Valley/**/*.{swift}"
   s.framework             = "UIKit"
+  s.swift_version         = '4.2'
 end
