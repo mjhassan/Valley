@@ -5,7 +5,7 @@ Valley is an iOS library that download asynchronously with caching capability. V
 To integrate Valley into your Xcode project using [Cocoapods](http://cocoapods.org/), specify it to a target in your Podfile:
 
     source 'https://github.com/CocoaPods/Specs.git'
-    platform :ios, '8.0'
+    platform :ios, '10.0'
     use_frameworks!
     
     target 'MyApp' do
