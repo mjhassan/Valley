@@ -1,0 +1,9 @@
+platform :ios, '10.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ValleyDemo' do
+  use_frameworks!
+
+  pod 'Valley', :git => 'https://github.com/mjhassan/Valley.git'
+
+end
