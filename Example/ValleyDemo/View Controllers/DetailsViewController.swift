@@ -25,7 +25,7 @@ class DetailsViewController: UICollectionViewController {
             if finished {
                 collectionView.scrollToItem(at: indexPath,at:.centeredHorizontally, animated: false)
             }
-        });
+        })
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,6 +42,14 @@ class DetailsViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate(alongsideTransition: { [weak self] _ in
+            self?.collectionView.collectionViewLayout.invalidateLayout()
+            }, completion: nil)
     }
     
     // MARK: UICollectionViewDataSource

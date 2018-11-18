@@ -8,11 +8,23 @@
 
 import UIKit
 
-public let screenBounds = UIScreen.main.bounds
-public let screenWidth = screenBounds.width
-public let screenHeight = screenBounds.height
-public let gridWidth : CGFloat = (screenWidth / 2) - 5.0
 public let navigationHeight: CGFloat = 44.0
 public let statubarHeight: CGFloat = 20.0
 public let navigationHeaderAndStatusbarHeight: CGFloat = navigationHeight + statubarHeight
 public let maxImageHeight: CGFloat = 400.0
+
+public var screenBounds: CGRect {
+    return UIScreen.main.bounds
+}
+
+public var screenWidth: CGFloat {
+    return screenBounds.width
+}
+
+public var screenHeight: CGFloat {
+    return screenBounds.height
+}
+
+public var gridWidth: CGFloat {
+    return (screenWidth / 2) - 5.0
+}
